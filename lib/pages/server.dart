@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_sample/apis/user.dart';
+import 'package:getx_sample/apis/book.dart';
 
 class ServerCommunication extends StatefulWidget {
   const ServerCommunication({Key? key}) : super(key: key);
@@ -14,7 +14,7 @@ class _ServerCommunicationState extends State<ServerCommunication> {
 
   @override
   Widget build(BuildContext context) {
-    UserRepository userRepository = Get.put(UserRepository());
+    BookRepository bookRepository = Get.put(BookRepository());
     return Scaffold(
       appBar: AppBar(
         title: const Text('server communication'),
@@ -25,17 +25,17 @@ class _ServerCommunicationState extends State<ServerCommunication> {
             children: <Widget>[
               ElevatedButton(
                   onPressed: () async {
-                    Response<List<User>> users =
-                        await userRepository.getUsers();
-                    print(users.body);
+                    Response<List<Book>> books =
+                        await bookRepository.getBooks();
+                    print(books.body);
                   },
-                  child: const Text('get users')),
+                  child: const Text('get Books')),
               ElevatedButton(
                   onPressed: () async {
-                    Response<User> users = await userRepository.getUser(0);
-                    print(users.body);
+                    Response<Book> Books = await bookRepository.getBook(0);
+                    print(Books.body);
                   },
-                  child: const Text('get user'))
+                  child: const Text('get Book'))
             ]),
       ),
     );
