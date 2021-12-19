@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_sample/pages/counterByReactive.dart';
 import 'package:getx_sample/pages/counterBySimple.dart';
+import 'package:getx_sample/pages/server.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -25,6 +26,11 @@ class Home extends StatelessWidget {
                   child: const Text('reactive state manage'),
                   onPressed: () {
                     Get.to(const CounterByReactive());
+                  }),
+              ElevatedButton(
+                  child: const Text('Server communication'),
+                  onPressed: () {
+                    Get.to(const ServerCommunication());
                   }),
             ],
           ),
