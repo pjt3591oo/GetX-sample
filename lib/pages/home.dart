@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_sample/pages/counterByReactive.dart';
 import 'package:getx_sample/pages/counterBySimple.dart';
-import 'package:getx_sample/pages/server.dart';
+import 'package:getx_sample/pages/http.dart';
+import 'package:getx_sample/pages/otherWidget.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -20,17 +21,22 @@ class Home extends StatelessWidget {
               ElevatedButton(
                   child: const Text('simple state manage'),
                   onPressed: () {
-                    Get.to(const CounterBySimple());
+                    Get.to(() => const CounterBySimple());
                   }),
               ElevatedButton(
                   child: const Text('reactive state manage'),
                   onPressed: () {
-                    Get.to(const CounterByReactive());
+                    Get.to(() => const CounterByReactive());
                   }),
               ElevatedButton(
                   child: const Text('Server communication'),
                   onPressed: () {
-                    Get.to(const ServerCommunication());
+                    Get.to(() => const HttpCommunicationPage());
+                  }),
+              ElevatedButton(
+                  child: const Text('Snackback, Dialog, BottomSheet'),
+                  onPressed: () {
+                    Get.to(() => const OtherWidgetPage());
                   }),
             ],
           ),

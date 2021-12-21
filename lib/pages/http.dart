@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_sample/apis/book.dart';
 
-class ServerCommunication extends StatefulWidget {
-  const ServerCommunication({Key? key}) : super(key: key);
+class HttpCommunicationPage extends StatefulWidget {
+  const HttpCommunicationPage({Key? key}) : super(key: key);
 
   @override
-  State<ServerCommunication> createState() => _ServerCommunicationState();
+  State<HttpCommunicationPage> createState() => _HttpCommunicationPageState();
 }
 
-class _ServerCommunicationState extends State<ServerCommunication> {
+class _HttpCommunicationPageState extends State<HttpCommunicationPage> {
   get child => null;
 
   @override
